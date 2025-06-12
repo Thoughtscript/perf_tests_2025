@@ -4,7 +4,7 @@ services:
       context: ./boot
       dockerfile: dockerfile
     ports:
-      - '8080:8080'
+      - '8888:8888'
     networks:
       - testnet
     restart: unless-stopped
@@ -14,7 +14,7 @@ services:
       context: ./webflux
       dockerfile: dockerfile
     ports:
-      - '8888:8888'
+      - '7777:7777'
     networks:
       - testnet
     restart: unless-stopped
