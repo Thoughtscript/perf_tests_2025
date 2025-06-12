@@ -1,17 +1,7 @@
 server:
   port: 7777
-  tomcat:
-    max-connections: 200
-    # Tomcat thread pool
-    threads:
-      min: 2
-      max: 4
 
 spring:
-  threads:
-    virtual:
-      enabled: true
-  # In WebFlux should specify the number of reactive threads
   task:
     execution:
       pool:

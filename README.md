@@ -10,8 +10,8 @@ docker compose up
 
 ## Endpoints
 
-1. localhost:7777/api/example/all
-1. localhost:8888/api/example/all
+1. http://localhost:7777/api/example/all
+1. http://localhost:8888/api/example/all
 
 ## Testing
 
