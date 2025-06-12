@@ -46,9 +46,10 @@ client:
 | Docker Desktop Memory Utilization | `378.9MB` | `412.1MB` | `201.1MB` |
 | Docker Desktop Peak CPU Utilization  | `291.54%` | `63%` | `54.72%` |
 | Docker Desktop CPU Utilization  | `29.41%` | `26.25%` |  `41.52%` |
-| Docker  | `maven:3.9.6-eclipse-temurin-22-alpine` | `maven:3.9.6-eclipse-temurin-22-alpine` |  `node:23.11.1` |
-| Computer | `AMD Ryzen 5 5600X (6/12 Core), 32 GB RAM, Windows 11 Pro` |  `AMD Ryzen 5 5600X (6/12 Core), 32 GB RAM, Windows 11 Pro` |  `AMD Ryzen 5 5600X (6/12 Core), 32 GB RAM, Windows 11 Pro` |
+| Docker  | `maven:3.9.6-eclipse-temurin-22-alpine` | `maven:3.9.6-eclipse-temurin-22-alpine` | `node:23.11.1` |
 | Repo  | [This very one](https://github.com/Thoughtscript/spring_perf_tests_2025) | [This very one](https://github.com/Thoughtscript/spring_perf_tests_2025) | [mearn_2024](https://github.com/Thoughtscript/mearn_2024) | 
 | Config of Note  | Virtual Threads (`100`) | Webflux/Reactor Threads (`5-10`) |  HTTPS Fork Cluster (`4`) w/ backing Mongo DB |
 | Version | Java `22`, Spring Boot `3.5.0` | Java `22`, Spring Boot `3.5.0` | Node `23.11.1`, Mongo `7.0.9` |
-| Endpoints | http://localhost:8888/api/example/all | http://localhost:7777/api/example/all | https://localhost:8888/api/event/6685f8f76dd0250b4e863266 |
+| Endpoints | http://localhost:8888/api/example/all | http://localhost:7777/api/example/all | https://localhost:8888/api/event/<UUID> |
+
+> Tested on Machine: `AMD Ryzen 5 5600X (6/12 Core), 32 GB RAM, Windows 11 Pro`
