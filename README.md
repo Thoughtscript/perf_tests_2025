@@ -41,7 +41,7 @@ client:
 | Detail  | Spring Boot | Spring WebFlux | Node.js | 
 | ---  | --- | --- | --- | 
 | Near Concurrent Connections  | `100,000` in `2` cycles | `100,000` in `2` cycles |  `100,000` in `2` cycles |
-| Total Duration | `137347ms`  |  `137114ms` | `213513` |
+| Total Duration | `137347ms`  |  `137114ms` | `213513ms` |
 | Average Client Request Duration | `0ms` | `0ms` | `1ms` |
 | Docker Desktop Memory Utilization | `378.9MB` | `412.1MB` | `201.1MB` |
 | Docker Desktop Peak CPU Utilization  | `291.54%` | `63%` | `54.72%` |
