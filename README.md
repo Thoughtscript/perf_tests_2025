@@ -7,3 +7,13 @@
 ```bash
 docker compose up
 ```
+
+## Endpoints
+
+1. localhost:7777/api/example/all
+1. localhost:8888/api/example/all
+
+## Testing
+
+1. Using [Test Client](https://github.com/Thoughtscript/test_client)
+2. [Postman](https://www.postman.com/)
