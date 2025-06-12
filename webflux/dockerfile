@@ -1,0 +1,10 @@
+FROM maven:3.9.6-eclipse-temurin-22-alpine
+
+RUN echo "Creating working dir and copying files"
+RUN mkdir /app
+WORKDIR /app
+COPY . .
+
+# RUN mvn clean && mvn install
+
+CMD ["mvn", "spring-boot:run"]

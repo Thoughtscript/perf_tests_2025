@@ -1,0 +1,24 @@
+services:
+  boot:
+    build:
+      context: ./boot
+      dockerfile: dockerfile
+    ports:
+      - '8080:8080'
+    networks:
+      - testnet
+    restart: unless-stopped
+
+  webflux:
+    build:
+      context: ./webflux
+      dockerfile: dockerfile
+    ports:
+      - '8888:8888'
+    networks:
+      - testnet
+    restart: unless-stopped
+
+networks:
+  testnet:
+    driver: bridge
