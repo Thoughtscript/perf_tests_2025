@@ -53,3 +53,14 @@ client:
 ## JMeter Findings
 
 > Available [here](./_jmeter/).
+
+
+## Resources and Links
+
+1. Node [1M Users](https://noncodersuccess.medium.com/how-id-scale-a-website-to-1-million-users-with-node-js-examples-53fb58c22302)
+2. Node [500K Users - 1K Concurrent](https://medium.com/unboxd/how-i-built-an-app-with-500-000-users-in-5-days-on-a-100-server-77deeb238e83)
+3. Node [10K Concurrent](https://www.metabrew.com/article/a-million-user-comet-application-with-mochiweb-part-1)
+4. Node [100K Users - 50K Concurrent](https://blog.devgenius.io/how-a-failed-startup-led-me-to-master-node-js-design-patterns-c9dd88e46afe)
+5. WebFlux [10K Concurrent](https://aabir-hassan.medium.com/demystifying-spring-webflux-the-event-loop-threading-models-and-schedulers-part-1-7d2711d2f60e)
+6. Node, Boot, and WebFlux [10K, 1K, and 10K Concurrent](https://www.brilworks.com/blog/node-js-vs-spring-boot/), respectively
+7. Boot [15K Concurrent](https://haril.dev/en/blog/2023/11/10/Spring-MVC-Traffic-Testing)
