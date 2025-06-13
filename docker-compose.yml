@@ -29,6 +29,27 @@ services:
       - testnet
     restart: unless-stopped
 
+  fastapi:
+    build:
+      context: ./fastapi
+      dockerfile: dockerfile
+    ports:
+      - '6767:6767'
+    networks:
+      - testnet
+    restart: unless-stopped
+
+
+  go:
+    build:
+      context: ./go
+      dockerfile: dockerfile
+    ports:
+      - '9999:9999'
+    networks:
+      - testnet
+    restart: unless-stopped
+
 networks:
   testnet:
     driver: bridge

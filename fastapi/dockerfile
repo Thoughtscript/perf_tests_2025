@@ -1,0 +1,19 @@
+FROM python:3.12.3
+
+RUN echo "Creating working dir and copying files"
+RUN mkdir /app
+WORKDIR /app
+COPY . .
+
+RUN apt-get update
+RUN apt-get autoremove -y 
+RUN apt-get autoclean -y
+RUN apt-get upgrade -y
+
+# update pip globally within the container
+RUN python3 -m pip install --upgrade pip
+# download dependencies to the image and container
+RUN python3 -m pip install -r requirements.txt
+
+# https://fastapi.tiangolo.com/deployment/server-workers/
+CMD [ "uvicorn", "main:app", "--host", "0.0.0.0", "--workers", "8", "--port", "6767", "--no-access-log"]
