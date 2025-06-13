@@ -1,0 +1,24 @@
+{
+    "name": "perf_tests_2025",
+    "version": "1.0.0",
+    "description": "Simple Node example",
+    "repository": "https://github.com/Thoughtscript/perf_tests_2025",
+    "main": "main.js",
+    "engines": {
+        "node": "=23.11.1"
+    },
+    "scripts": {
+        "start": "node main.js",
+        "test": "node tests/index.js",
+        "jest": "jest"
+    },
+    "dependencies": {
+        "cookie-parser": "=1.4.6",
+        "cors": "=2.8.5",
+        "express": "=4.18.1",
+        "morgan": "=1.10.0"
+    },
+    "devDependencies": {
+        "supertest": "=7.1.1"
+    }
+}

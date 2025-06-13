@@ -19,6 +19,16 @@ services:
       - testnet
     restart: unless-stopped
 
+  node:
+    build:
+      context: ./node
+      dockerfile: dockerfile
+    ports:
+      - '8787:8787'
+    networks:
+      - testnet
+    restart: unless-stopped
+
 networks:
   testnet:
     driver: bridge

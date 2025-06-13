@@ -1,0 +1,10 @@
+FROM node:23.11.1
+
+RUN echo "Creating working dir and copying files"
+RUN mkdir /app
+WORKDIR /app
+COPY . .
+
+RUN npm i
+
+CMD ["bash", "run.sh"]
