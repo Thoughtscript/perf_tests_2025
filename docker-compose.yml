@@ -1,10 +1,20 @@
 services:
-  boot:
+  boot_22:
     build:
-      context: ./boot
+      context: ./boot_22
       dockerfile: dockerfile
     ports:
       - '8888:8888'
+    networks:
+      - testnet
+    restart: unless-stopped
+
+  boot_25:
+    build:
+      context: ./boot_25
+      dockerfile: dockerfile
+    ports:
+      - '8989:8989'
     networks:
       - testnet
     restart: unless-stopped

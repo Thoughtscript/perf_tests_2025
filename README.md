@@ -1,6 +1,7 @@
 # perf_tests_2025
 
 [![](https://img.shields.io/badge/Spring%20Boot-3.5.0-green.svg)](https://spring.io/projects/spring-boot)
+[![](https://img.shields.io/badge/Spring%20Boot-4.0.0M3-green.svg)](https://spring.io/projects/spring-boot)
 [![](https://img.shields.io/badge/Maven-3.8.6-white.svg)](https://maven.apache.org/download.cgi)
 [![](https://img.shields.io/badge/Node.js-23.11.1-yellowgreen.svg)](https://nodejs.org/en/) 
 [![](https://img.shields.io/badge/FastAPI-0.115.12-yellow.svg)](https://fastapi.tiangolo.com/) 
@@ -37,18 +38,18 @@ client:
 
 > Verifies that there are no errors: no `5XX`, no `4XX` - retrieves and logs Response Body.
 
-| Detail  | Spring Boot | Spring WebFlux | Node.js | FastAPI | Go |
-| ---  | --- | --- | --- | --- | --- |
-| Near Concurrent Connections  | `100,000` in `2` cycles | `100,000` in `2` cycles |  `100,000` in `2` cycles | `100,000` in `2` cycles |  `100,000` in `2` cycles |
-| Total Duration | `137347ms`  |  `137114ms` | `131182ms` | `145531ms` | `113625ms` |
-| Average Client Request Duration | `0ms` | `0ms` | `0ms` | `0ms` | `0ms` |
-| Docker Desktop Memory Utilization | `378.9MB` | `412.1MB` | `224.4MB` | `273.1MB` | `135.5MB ` |
-| Docker Desktop Peak CPU Utilization  | `291.54%` | `63%` | `25.83%` | `28.6%`| `20%` |
-| Docker Desktop CPU Utilization  | `29.41%` | `26.25%` |  `27.43%` | `27.14%` | `19.84%` |
-| Docker  | `maven:3.9.6-eclipse-temurin-22-alpine` | `maven:3.9.6-eclipse-temurin-22-alpine` | `node:23.11.1` | `python:3.12.3` | `golang:1.24.0` |
-| Config of Note  | Virtual Threads (`100`) | Webflux/Reactor Threads (`5-10`) |  HTTPS Fork Cluster (`8`), SSL | Uvicorn Workers (`8`) | Go Routines/Channels, SSL |
-| Version | Java `22`, Spring Boot `3.5.0` | Java `22`, Spring Boot `3.5.0` | Node `23.11.1` | Python `3.12.3`, fastapi `0.115.12` | Go `1.24.0` |
-| Endpoints | http://localhost:8888/api/example/all | http://localhost:7777/api/example/all | https://localhost:8787/api/example/all | http://localhost:6767/api/example/all | https://localhost:9999/api/example/all |
+| Detail  | Spring Boot 22 | Spring WebFlux | Node.js | FastAPI | Go | Spring Boot 24 |
+| ---  | --- | --- | --- | --- | --- | --- |
+| Near Concurrent Connections  | `100,000` in `2` cycles | `100,000` in `2` cycles |  `100,000` in `2` cycles | `100,000` in `2` cycles |  `100,000` in `2` cycles | `100,000` in `2` cycles |
+| Total Duration | `137347ms`  |  `137114ms` | `131182ms` | `145531ms` | `113625ms` | `146942ms` |
+| Average Client Request Duration | `0ms` | `0ms` | `0ms` | `0ms` | `0ms` | `0ms` |
+| Docker Desktop Memory Utilization | `378.9MB` | `412.1MB` | `224.4MB` | `273.1MB` | `135.5MB ` | `473.3MB` |
+| Docker Desktop Peak CPU Utilization  | `291.54%` | `63%` | `25.83%` | `28.6%`| `20%` | `31.13%` |
+| Docker Desktop CPU Utilization  | `29.41%` | `26.25%` |  `27.43%` | `27.14%` | `19.84%` | `28.9%` | 
+| Docker  | `maven:3.9.6-eclipse-temurin-22-alpine` | `maven:3.9.6-eclipse-temurin-22-alpine` | `node:23.11.1` | `python:3.12.3` | `golang:1.24.0` | `maven:3.9.6-eclipse-temurin-22-alpine` |
+| Config of Note  | Virtual Threads (`100`) | Webflux/Reactor Threads (`5-10`) |  HTTPS Fork Cluster (`8`), SSL | Uvicorn Workers (`8`) | Go Routines/Channels, SSL | Virtual Threads (`100`) 
+| Version | Java `22`, Spring Boot `3.5.0` | Java `22`, Spring Boot `3.5.0` | Node `23.11.1` | Python `3.12.3`, fastapi `0.115.12` | Go `1.24.0` |  Java `24`, Spring Boot `4.0.0M3` |
+| Endpoints | http://localhost:8888/api/example/all | http://localhost:7777/api/example/all | https://localhost:8787/api/example/all | http://localhost:6767/api/example/all | https://localhost:9999/api/example/all | http://localhost:8989/api/example/all |
 
 > Tested on Machine: `AMD Ryzen 5 5600X (6/12 Core), 32 GB RAM, Windows 11 Pro`
 
