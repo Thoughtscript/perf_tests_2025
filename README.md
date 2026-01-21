@@ -38,7 +38,7 @@ client:
 
 > Verifies that there are no errors: no `5XX`, no `4XX` - retrieves and logs Response Body.
 
-| Detail  | Spring Boot 22 | Spring WebFlux | Node.js | FastAPI | Go | Spring Boot 24 |
+| Detail  | Spring Boot 22 | Spring WebFlux | Node.js | FastAPI | Go | Spring Boot 25 |
 | ---  | --- | --- | --- | --- | --- | --- |
 | Near Concurrent Connections  | `100,000` in `2` cycles | `100,000` in `2` cycles |  `100,000` in `2` cycles | `100,000` in `2` cycles |  `100,000` in `2` cycles | `100,000` in `2` cycles |
 | Total Duration | `137347ms`  |  `137114ms` | `131182ms` | `145531ms` | `113625ms` | `146942ms` |
@@ -48,7 +48,7 @@ client:
 | Docker Desktop CPU Utilization  | `29.41%` | `26.25%` |  `27.43%` | `27.14%` | `19.84%` | `28.9%` | 
 | Docker  | `maven:3.9.6-eclipse-temurin-22-alpine` | `maven:3.9.6-eclipse-temurin-22-alpine` | `node:23.11.1` | `python:3.12.3` | `golang:1.24.0` | `maven:3.9.6-eclipse-temurin-22-alpine` |
 | Config of Note  | Virtual Threads (`100`) | Webflux/Reactor Threads (`5-10`) |  HTTPS Fork Cluster (`8`), SSL | Uvicorn Workers (`8`) | Go Routines/Channels, SSL | Virtual Threads (`100`) 
-| Version | Java `22`, Spring Boot `3.5.0` | Java `22`, Spring Boot `3.5.0` | Node `23.11.1` | Python `3.12.3`, fastapi `0.115.12` | Go `1.24.0` |  Java `24`, Spring Boot `4.0.0M3` |
+| Version | Java `22`, Spring Boot `3.5.0` | Java `22`, Spring Boot `3.5.0` | Node `23.11.1` | Python `3.12.3`, fastapi `0.115.12` | Go `1.24.0` |  Java `25`, Spring Boot `4.0.0M3` |
 | Endpoints | http://localhost:8888/api/example/all | http://localhost:7777/api/example/all | https://localhost:8787/api/example/all | http://localhost:6767/api/example/all | https://localhost:9999/api/example/all | http://localhost:8989/api/example/all |
 
 > Tested on Machine: `AMD Ryzen 5 5600X (6/12 Core), 32 GB RAM, Windows 11 Pro`
